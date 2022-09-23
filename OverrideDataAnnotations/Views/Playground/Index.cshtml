@@ -1,0 +1,55 @@
+﻿@model ExampleViewModel
+
+@{
+    ViewData["Title"] = "Playground";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!-- FirstName begin -->
+            <div class="form-floating mb-3">
+                <input asp-for="FirstName" class="form-control" placeholder=" " />
+                <label asp-for="FirstName" class="form-label required"></label>
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <!-- FirstName end -->
+            <!-- LastName begin -->
+            <div class="form-floating mb-3">
+                <input asp-for="LastName" class="form-control" placeholder=" " />
+                <label asp-for="LastName" class="form-label required"></label>
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <!-- LastName end -->
+            <!-- Email begin -->
+            <div class="form-floating mb-3">
+                <input asp-for="Email" class="form-control" placeholder=" " />
+                <label asp-for="Email" class="form-label required"></label>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <!-- Email end -->
+            <!-- PhoneNumber begin -->
+            <div class="form-floating mb-3">
+                <input asp-for="PhoneNumber" class="form-control" placeholder=" " />
+                <label asp-for="PhoneNumber" class="form-label"></label>
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <!-- PhoneNumber end -->
+            <!-- Age begin -->
+            <div class="form-floating mb-3">
+                <input asp-for="Age" class="form-control" placeholder=" " />
+                <label asp-for="Age" class="form-label required"></label>
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <!-- Age end -->
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
